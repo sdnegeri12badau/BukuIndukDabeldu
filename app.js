@@ -337,14 +337,6 @@ if (enterBtn) {
   });
 }
 
-  $('#enter').hidden=true;
-
-  $('#lg').hidden=false;
-
-  $('#lu').focus();
-
-};
-
 
 /* Tampilkan/sembunyikan password */
 
