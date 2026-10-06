@@ -318,7 +318,24 @@ let lock=0;
 
 /* Tombol mulai/login */
 
-$('#enter').onclick=()=>{
+const enterBtn = document.getElementById('enter');
+
+if (enterBtn) {
+  enterBtn.addEventListener('click', function () {
+    const login = document.getElementById('lg');
+
+    if (login) {
+      enterBtn.hidden = true;
+      login.hidden = false;
+
+      const username = document.getElementById('lu');
+
+      if (username) {
+        username.focus();
+      }
+    }
+  });
+}
 
   $('#enter').hidden=true;
 
