@@ -1,3 +1,5 @@
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 const L=(k,l,t)=>({k,l,t});
 const AG=['Islam','Kristen','Katolik','Hindu','Buddha','Konghucu'];
 const idf=(p)=>[L(p+'nama','Nama lengkap'),L(p+'nik','NIK'),L(p+'ttl','Tempat/tanggal lahir'),L(p+'pend','Pendidikan terakhir'),L(p+'kerja','Pekerjaan'),L(p+'gaji','Penghasilan'),L(p+'alamat','Alamat'),L(p+'hp','Nomor HP')];
