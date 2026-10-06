@@ -1,19 +1,286 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="utf-8">
+<html lang="id">
+<head>
+<meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>Buku Induk Digital – SD Negeri 12 Badau</title>
+
 <link rel="icon" href="assets/logo-sekolah.png">
-<link rel="stylesheet" href="style.css"></head><body>
-<section id="cover"><div class="ctop"><img src="assets/logo-tutwuri.png" alt="Tut Wuri Handayani"><img src="assets/logo-sekolah.png" alt="SD Negeri 12 Badau"><img class="r" src="assets/logo-pbuk.png" alt="Pendidikan Bermutu untuk Semua"></div>
-<div class="cmain"><p class="k">BUKU INDUK DIGITAL</p><h1>SD NEGERI 12 BADAU</h1><p>Jl. Membalong KM 15, Dusun Mempiu, Desa Cerucuk, Kec. Badau, Kab. Belitung, Kepulauan Bangka Belitung</p><button id="enter">Masuk Aplikasi →</button>
-<form id="lg" hidden autocomplete="off"><h2>Login Guru</h2><label>Username<input id="lu" required autocapitalize="off" autocomplete="username"></label><label>Password<input id="lp" type="password" required autocomplete="current-password"></label><label class="sp"><input type="checkbox" id="ls"> Tampilkan password</label><div id="le"></div><button class="p" type="submit">Masuk</button></form></div>
-<div class="cfoot">Administrasi peserta didik · Aplikasi untuk guru kelas</div></section>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HALAMAN DEPAN / COVER
+     ===================================================== -->
+
+<section id="cover">
+
+    <div class="ctop">
+
+        <img src="assets/logo-tutwuri.png" alt="Tut Wuri Handayani">
+
+        <img src="assets/logo-sekolah.png" alt="SD Negeri 12 Badau">
+
+        <img class="r" src="assets/logo-pbuk.png" alt="Pendidikan Bermutu untuk Semua">
+
+    </div>
+
+
+    <div class="cmain">
+
+        <p class="k">BUKU INDUK DIGITAL</p>
+
+        <h1>SD NEGERI 12 BADAU</h1>
+
+        <p>
+            Jl. Membalong KM 15, Dusun Mempiu, Desa Cerucuk,
+            Kec. Badau, Kab. Belitung, Kepulauan Bangka Belitung
+        </p>
+
+
+        <!-- TOMBOL MASUK APLIKASI -->
+
+        <button id="enter" type="button">
+            Masuk Aplikasi →
+        </button>
+
+
+        <!-- =================================================
+             FORM LOGIN GURU
+             ================================================= -->
+
+        <form id="lg" hidden autocomplete="off">
+
+            <h2>Login Guru</h2>
+
+
+            <label>
+                Username
+
+                <input
+                    id="lu"
+                    required
+                    autocapitalize="off"
+                    autocomplete="username"
+                >
+
+            </label>
+
+
+            <label>
+                Password
+
+                <input
+                    id="lp"
+                    type="password"
+                    required
+                    autocomplete="current-password"
+                >
+
+            </label>
+
+
+            <label class="sp">
+
+                <input
+                    type="checkbox"
+                    id="ls"
+                >
+
+                Tampilkan password
+
+            </label>
+
+
+            <div id="le"></div>
+
+
+            <button
+                class="p"
+                type="submit"
+            >
+                Masuk
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="cfoot">
+        Administrasi peserta didik · Aplikasi untuk guru kelas
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APLIKASI UTAMA
+     ===================================================== -->
+
 <div id="shell" hidden>
-<header><img src="assets/logo-tutwuri.png" alt="Tut Wuri Handayani"><img src="assets/logo-sekolah.png" alt="SD Negeri 12 Badau"><div class="ttl"><b>BUKU INDUK DIGITAL</b><span>SD Negeri 12 Badau · Desa Cerucuk, Kec. Badau, Kab. Belitung</span></div><img class="r" src="assets/logo-pbuk.png" alt="Pendidikan Bermutu untuk Semua"></header>
-<nav id="menu"><button data-v="dash" class="on">🏠 Dashboard</button><button data-v="siswa">👩‍🎓 Data Siswa</button><button data-v="xl">📊 Excel</button><button id="out">⎋ Keluar</button></nav>
-<main id="app"></main></div>
+
+    <header>
+
+        <img
+            src="assets/logo-tutwuri.png"
+            alt="Tut Wuri Handayani"
+        >
+
+        <img
+            src="assets/logo-sekolah.png"
+            alt="SD Negeri 12 Badau"
+        >
+
+        <div class="ttl">
+
+            <b>BUKU INDUK DIGITAL</b>
+
+            <span>
+                SD Negeri 12 Badau · Desa Cerucuk,
+                Kec. Badau, Kab. Belitung
+            </span>
+
+        </div>
+
+        <img
+            class="r"
+            src="assets/logo-pbuk.png"
+            alt="Pendidikan Bermutu untuk Semua"
+        >
+
+    </header>
+
+
+    <!-- =================================================
+         MENU
+         ================================================= -->
+
+    <nav id="menu">
+
+        <button
+            data-v="dash"
+            class="on"
+        >
+            🏠 Dashboard
+        </button>
+
+
+        <button
+            data-v="siswa"
+        >
+            👩‍🎓 Data Siswa
+        </button>
+
+
+        <button
+            data-v="xl"
+        >
+            📊 Excel
+        </button>
+
+
+        <button id="out">
+            ⎋ Keluar
+        </button>
+
+    </nav>
+
+
+    <!-- =================================================
+         AREA APLIKASI
+         ================================================= -->
+
+    <main id="app"></main>
+
+</div>
+
+
+<!-- =====================================================
+     LIBRARY EXCEL
+     ===================================================== -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+
+<!-- =====================================================
+     FIREBASE
+     ===================================================== -->
+
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
 <script src="firebase-config.js"></script>
-<script src="app.js"></script></body></html>
+
+
+<!-- =====================================================
+     APLIKASI JAVASCRIPT
+     ===================================================== -->
+
+<script src="app.js"></script>
+
+
+<!-- =====================================================
+     PERBAIKAN TOMBOL "MASUK APLIKASI"
+     ===================================================== -->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const tombolMasuk = document.getElementById('enter');
+
+    const formLogin = document.getElementById('lg');
+
+    const username = document.getElementById('lu');
+
+
+    /*
+     * Ketika tombol "Masuk Aplikasi" diklik,
+     * sembunyikan tombol dan tampilkan form login.
+     */
+
+    if (tombolMasuk) {
+
+        tombolMasuk.addEventListener('click', function (e) {
+
+            e.preventDefault();
+
+            tombolMasuk.hidden = true;
+
+
+            if (formLogin) {
+
+                formLogin.hidden = false;
+
+            }
+
+
+            if (username) {
+
+                setTimeout(function () {
+
+                    username.focus();
+
+                }, 100);
+
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
